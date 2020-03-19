@@ -1,18 +1,30 @@
 import React, { Component } from "react";
+import "./component.css";
 
 class Recipe extends Component {
-  state = {};
+  state = { btnSymbol: "+" };
+
+  handleMinMax = () => {
+    const btnSymbol = this.state.btnSymbol === "+" ? "-" : "+";
+    this.setState({ btnSymbol });
+  };
 
   render() {
     return (
-      <div className="recipe-border">
-        <h1>{this.props.name}</h1>
-        <ol className="recipe-steps">
-          {this.props.steps.map(step => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
-      </div>
+      <React.Fragment>
+        <div className="recipe-border">
+          <h1>{this.props.name}</h1>
+          <button className="mBtn" onClick={this.handleMinMax}>
+            {this.state.btnSymbol}
+          </button>
+          <ol className="recipe-steps">
+            {this.props.steps.map(step => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </div>
+        <br />
+      </React.Fragment>
     );
   }
 }

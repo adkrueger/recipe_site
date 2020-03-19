@@ -5,11 +5,13 @@ class Home extends Component {
   state = {
     recipes: [
       {
+        id: "1",
         name: "chicken",
         ingredients: ["salt", "chicken", "pepper"],
         steps: ["chicken in pan", "pan on stove", "cook chicky", "enjoy"]
       },
       {
+        id: "2",
         name: "tofu",
         ingredients: ["tofu", "soy sauce", "love"],
         steps: [

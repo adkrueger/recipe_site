@@ -10,6 +10,7 @@ class Recipes extends Component {
       <div className="allRecipes">
         {recipes.map(recipe => (
           <Recipe
+            key={recipe.id}
             name={recipe.name}
             ingredients={recipe.ingredients}
             steps={recipe.steps}
