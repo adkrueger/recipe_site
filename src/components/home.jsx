@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar-expand-lg navbar-light bg-light"></nav>
+        <p>Hello, world!!!!!!!</p>
       </React.Fragment>
     );
   }
